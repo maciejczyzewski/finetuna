@@ -122,12 +122,13 @@ int ee_check(int board[][10]) {
 				FOR(i, 0, 10) { // maksymalna dlugosc planszy
 					P.x += rate_x; P.y += rate_y; // kierunek
 					int S = ee_valid_move(board, Po, P); // walidacja
-					if (S >= 1) ok = true;
+					if (S >= 1 && PLAYER==__o(board[Po.y][Po.x])) ok = true;
 				}
 			}
 		}
 	int rep = 0;
 	FOR(i, 0, cache_len-1) if (h == cache[i]) rep++;
+	AA("----------------------> %d", rep);
 	if (rep > 15) return -1;
 	cache[cache_len++] = h;
 	if (ok) return 1;

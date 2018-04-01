@@ -71,4 +71,5 @@ void *event_game(void *argument) {
 			/*MUST_LEN = 0; DEEP = 0;*/}
 
 		usleep(100000);
+		//usleep(1000);
 	}}
