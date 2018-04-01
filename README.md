@@ -1,5 +1,5 @@
 <div align="center">
-	<a href="#"> <img width="150px" height="150px" src="deps/screen.png"></a>
+	<a href="#"> <img width="450px" height="450px" src="deps/screen.png"></a>
 </div>
 
 ----------------------------------------------------------------
