@@ -6,7 +6,7 @@
 
 ### Overview
 
-Finetuna is a free checkers/draughts engine.
+Finetuna is a free international (a.k.a. "Polish") checkers/draughts engine.
 
 ### Installation
 
