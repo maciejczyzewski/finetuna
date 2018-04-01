@@ -62,13 +62,19 @@ void *event_game(void *argument) {
 			EVENT_MOVE = 1;
 			AA("EVENT_MOVE;");
 
-			int status = ee_check(BOARD);
+			int status = ee_check(BOARD, true);
 			if (status != 1) { // sprawdza rezultat!
 				AA("END, %d (status: %d)", PLAYER, status);
 				STATUS = status;
 				} // FIXME: ALERT!!!
 
 			/*MUST_LEN = 0; DEEP = 0;*/}
+
+			int status = ee_check(BOARD, false);
+			if (status != 1) { // sprawdza rezultat!
+				AA("END, %d (status: %d)", PLAYER, status);
+				STATUS = status;
+				} // FIXME: ALERT!!!
 
 		usleep(100000);
 		//usleep(1000);

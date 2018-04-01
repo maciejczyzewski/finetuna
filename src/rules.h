@@ -107,7 +107,7 @@ void ee_do_move(int board[][10], struct cell a, struct cell b) {
 
 int cache[1024]; int cache_len = 0;
 
-int ee_check(int board[][10]) {
+int ee_check(int board[][10], bool type) {
 	bool ok = false; int h = 0;
 	FOR(i, 0, 10-1) FOR(j, 0, 10-1)
 		if ((i+j)%2==1&&board[i][j]!=0) {
@@ -130,7 +130,7 @@ int ee_check(int board[][10]) {
 	FOR(i, 0, cache_len-1) if (h == cache[i]) rep++;
 	AA("----------------------> %d", rep);
 	if (rep > 15) return -1;
-	cache[cache_len++] = h;
+	if (type == true) cache[cache_len++] = h;
 	if (ok) return 1;
 	return 0; }
 
